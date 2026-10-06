@@ -10,35 +10,28 @@ package part07;
 // The top line of each problem is given to you. The inputs are already in the
 // variables inside the ( ). Replace ONLY the line marked YOUR CODE.
 // Your answer goes after the word return. You may add more lines above it.
-
 public class Challenge {
-
     // Problem 1 — canPlay
     // You can play video games if your homework is done OR it is the weekend,
     // AND the hour is from 8 up to (but not including) 21.
-    // Hours use a 24-hour clock: 8 is 8 AM, 20 is 8 PM, 21 is 9 PM.
-    //
-    //   canPlay(true, false, 10)   → true    homework done, 10 AM
-    //   canPlay(false, true, 20)   → true    weekend, 8 PM
-    //   canPlay(false, false, 15)  → false   no homework done, not the weekend
-    //   canPlay(true, true, 21)    → false   too late
-    //   canPlay(true, false, 7)    → false   too early
     public static boolean canPlay(boolean homeworkDone, boolean isWeekend, int hour) {
-        return false;   // YOUR CODE — use && and ||
+        // Returns true if homework is done OR it is the weekend,
+        // AND the time is from 8 through 20
+        return (homeworkDone || isWeekend) && hour >= 8 && hour < 21;
     }
-
     // Problem 2 — digitCount
-    // Return how many digits n has. n is never negative. 0 has 1 digit.
-    //
-    //   digitCount(7)      → 1
-    //   digitCount(42)     → 2
-    //   digitCount(999)    → 3
-    //   digitCount(12345)  → 5
-    //   digitCount(0)      → 1
-    //
-    // Hint: n / 10 chops off the last digit. 12345 / 10 is 1234.
-    // Use a while loop that keeps chopping and counts how many times.
+    // Returns the number of digits in n
     public static int digitCount(int n) {
-        return 0;   // YOUR CODE — use a while loop
+        // Starts at 1 because even 0 and single-digit numbers have one digit
+        int count = 1;
+        // Keeps looping while n has more than one digit
+        while (n >= 10) {
+            // Divides by 10 to remove the last digit
+            n = n / 10;
+            // Adds one for each digit that was removed
+            count++;
+        }
+        // Returns the total number of digits
+        return count;
     }
 }
