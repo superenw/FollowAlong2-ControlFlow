@@ -15,5 +15,17 @@ package part07;
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
 public class LogicalOperators {
-
+    public static void main(String[] args) {
+        int temp = 20;
+        if (temp >= 80) {
+            System.out.println("It is hot outside");
+        }
+        else if (temp >= 60 && temp <= 70) {
+            System.out.println("It is warm outside");
+        }
+        else {
+            System.out.println("It is cold outside");
+        }
+    }
 }
+
