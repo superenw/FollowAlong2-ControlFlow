@@ -12,7 +12,16 @@ package part08;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
-
+// Declares a public class named ForLoops
 public class ForLoops {
-
+    // Defines the main method, which is the entry point of the program
+    public static void main(String[] args) {
+        // Starts a for loop at 10, repeats while i is at least 0, and decreases i by 1 each time
+        for(int i = 10; i >= 0; i--) {
+            // Prints the current value of i to the console
+            System.out.println(i);
+        }
+        // Prints "Happy New Year" after the loop finishes
+        System.out.println("Happy New Year");
+    }
 }
